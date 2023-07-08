@@ -1,0 +1,53 @@
+@use './scss/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+  
+}
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+button,
+input {
+    outline: 0;
+    border: none;
+}
+ul {
+    list-style-type: none;
+}
+img {
+    max-width: 100%;
+}
+.container {
+  @include flex(row, unset, unset);
+  position: relative;
+  width: 100%;
+  height: 100vh;
+    @include mobile {
+      @include flex(column-reverse, space-between, flex-end);
+    }
+}
+
+@keyframes slideDown {
+  from {
+      opacity: 0;
+      transform: translateY(-100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}

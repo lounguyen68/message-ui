@@ -1,0 +1,37 @@
+@use '../../scss/' as *;
+
+.message {
+    width: 100%;
+    height: max-content;
+    margin-bottom: 0.5em;
+    &__box {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: $black;
+        border-radius: 30px;
+        padding: 0.5em 1em;
+        width: fit-content;
+        height: fit-content;
+        @include tablet {
+            padding: 0.5em 1em;
+            font-size: 18px;
+        }
+        @include mobile {
+            padding: 0.2em 0.5em;
+            font-size: 14px;
+        }
+    }
+    &.me {
+        @include flex(row, center, flex-end);
+        .message__box {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+
+    @include tablet {
+
+    }
+    // @include mobile {
+
+    // }
+}
